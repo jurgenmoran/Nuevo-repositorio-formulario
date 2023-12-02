@@ -78,7 +78,7 @@
         </select>
       </div>
 
-      <p class="satisfação"><b>Você recomendaria a nossa empresa de transporte?</b></p>
+      <p class="satisfação"><b>Você recomendaria a nossa empresa de transporte?<b></b> *</b></p>
         <label class="recomendacion" for="Definitivamente">
           <input type="radio" name="satisfação" value="Definitivamente" />
            <b> Definitivamente</b>
@@ -91,6 +91,45 @@
           <input type="radio" name="satisfação" value="Nunca" />
            <b> Nunca</b>
         </label>
+
+        <p class="satisfação"><b>Qual parte do serviço você gostou mais?</b><b> *</b></p>
+        <select name="parte do serviço" required>
+          <option diabled select value="Selecione uma opção">Selecione uma opção</option>
+          <option value="Transporte adecuado">Transporte adecuado</option>
+          <option value="Tempo de entrega">Tempo de entrega</option>
+          <option value="Empleados educados">Educação dos empleados</option>
+          <option value="Atenção ao cliente">Nosso atendimento</option>
+          <option value="O serviço completo">O serviço completo</option>
+        </select>
+
+        <p class="satisfação"><b>Qual parte do serviço nós recomenda melhorar? (Marque todas as opções aplicáveis)</b></p>
+        <ul>
+          <li><label for="preferencia">
+            <input type="checkbox"><b> Transporte adecuado</b>
+          </label></li>
+          <li>
+            <label for="preferencia">
+            <input type="checkbox"><b> Tempo de Entrega</b>
+          </label></li>
+          <li>
+            <label for="preferencia">
+              <input type="checkbox"><b> Educação dos empleados</b>
+            </label>
+          </li>
+          <li>
+            <label for="preferencia">
+              <input type="checkbox"><b> Nosso atendimento</b>
+            </label>
+          </li>
+          <li>
+            <label for="preferencia">
+              <input type="checkbox"><b> Serviço completo</b>
+            </label>
+          </li>
+        </ul>
+
+        <p><b>Algum comentário ou sugestão?</b></p>
+        <textarea name="comentario" cols="79" rows="4" placeholder="Deixe seu comentario aqui...."></textarea>
     </article>
 
     <footer class="footer">
