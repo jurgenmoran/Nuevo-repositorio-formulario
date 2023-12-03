@@ -7,10 +7,7 @@
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
+      rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
 
     <link rel="stylesheet" href="./src/style.css" />
   </head>
@@ -19,82 +16,80 @@
       <div class="barra"></div>
       <h1>Formulario de Satisfação</h1>
       <h3><i>Obrigado por escolher nossa empresa</i></h3>
-      <img
-        class="logo"
-        src="./src/Imagenes/Logo2-9481f33c-338w.png"
-        alt="Logo"
-      />
+      <img class="logo" src="./src/Imagenes/Logo2-9481f33c-338w.png" alt="Logo"/>
     </header>
 
     <hr />
+    <form id="formulario-pesquisa">
+      <section class="section">
+        <div class="importante">
+          <p><i>Todas as perguntas marcadas com (*) são obrigatorias.</i></p>
+        </div>
 
-    <section class="section">
-      <div class="importante">
-        <p><i>Todas as perguntas marcadas com (*) são obrigatorias.</i></p>
-      </div>
-
-      <label class="info" for="nome"><b>Nome Completo:</b></label>
-      <input type="text" name="nome" placeholder="Coloque seu nome" required />
-      <b>*</b>
-
-      <div>
-        <label class="info" for="email"><b>Email:</b></label>
-        <input
-          type="text"
-          name="email"
-          placeholder="Ingrese seu Email"
-          required
+        <label class="info" for="nome"><b>Nome Completo:</b></label>
+        <input type="text" name="nome" id="nome" placeholder="Coloque seu nome" required
         />
         <b>*</b>
-      </div>
 
-      <label class="info" for="cargo"><b>Cargo (Opcional):</b></label>
-      <input type="text" name="cargo" placeholder="Cargo" required />
+        <div>
+          <label class="info" for="email"><b>Email:</b></label>
+          <input type="email" name="email" id="email" placeholder="Ingrese seu Email" required
+          />
+          <b>*</b>
+        </div>
 
-      <p class="info"><b>Você foi quem solicitou o serviço?</b><b> *</b></p>
-      <b></b>
-      <label class="info" for="sim">
-        <input type="radio" name="responsavel" value="sim" /><b> Sim</b>
-      </label>
+        <label class="info" for="cargo"><b>Cargo (Opcional):</b></label>
+        <input type="text" name="cargo" placeholder="Cargo" required />
 
-      <label class="info" for="sim">
-        <input type="radio" name="responsavel" value="nao" /><b>Não</b>
-      </label>
-    </section>
+        <p class="info"><b>Você foi quem solicitou o serviço?</b><b> *</b></p>
+        <label class="info" for="sim">
+          <input type="radio" name="responsavel" value="sim" /><b> Sim</b>
+        </label>
 
-    <hr />
+        <label class="info" for="sim">
+          <input type="radio" name="responsavel" value="nao" /><b>Não</b>
+        </label>
+      </section>
 
-    <article>
-      <div>
-        <p>
-          <b>Qual das seguintes opções descreve sua satisfação?</b> <b>*</b>
+      <hr />
+
+      <article>
+        <div>
+          <p>
+            <b>Qual das seguintes opções descreve sua satisfação?</b> <b>*</b>
+          </p>
+          <select name="satisfação" required>
+            <option diabled select value>Selecione uma opção</option>
+            <option value="Muito-Satisfeito">Muito satisfeito</option>
+            <option value="Satisfeito">Satisfeito</option>
+            <option value="Insatisfeito">Insatisfeito</option>
+            <option value="Nada-Satisfeito">Nada satisfeito</option>
+          </select>
+        </div>
+
+        <p class="satisfação">
+          <b>Você recomendaria a nossa empresa de transporte?<b></b> *</b>
         </p>
-        <select name="satisfação" required>
-          <option diabled select value>Selecione uma opção</option>
-          <option value="Muito-Satisfeito">Muito satisfeito</option>
-          <option value="Satisfeito">Satisfeito</option>
-          <option value="Insatisfeito">Insatisfeito</option>
-          <option value="Nada-Satisfeito">Nada satisfeito</option>
-        </select>
-      </div>
-
-      <p class="satisfação"><b>Você recomendaria a nossa empresa de transporte?<b></b> *</b></p>
         <label class="recomendacion" for="Definitivamente">
           <input type="radio" name="satisfação" value="Definitivamente" />
-           <b> Definitivamente</b>
+          <b> Definitivamente</b>
         </label>
         <label class="recomendacion" for="Talvez">
           <input type="radio" name="Satisfação" value="Talvez" />
-           <b> Talvez</b>
+          <b> Talvez</b>
         </label>
         <label class="recomendacion" for="Nunca">
           <input type="radio" name="satisfação" value="Nunca" />
-           <b> Nunca</b>
+          <b> Nunca</b>
         </label>
 
-        <p class="satisfação"><b>Qual parte do serviço você gostou mais?</b><b> *</b></p>
+        <p class="satisfação">
+          <b>Qual parte do serviço você gostou mais?</b><b> *</b>
+        </p>
         <select name="parte do serviço" required>
-          <option diabled select value="Selecione uma opção">Selecione uma opção</option>
+          <option diabled select value="Selecione uma opção">
+            Selecione uma opção
+          </option>
           <option value="Transporte adecuado">Transporte adecuado</option>
           <option value="Tempo de entrega">Tempo de entrega</option>
           <option value="Empleados educados">Educação dos empleados</option>
@@ -102,44 +97,54 @@
           <option value="O serviço completo">O serviço completo</option>
         </select>
 
-        <p class="satisfação"><b>Qual parte do serviço nós recomenda melhorar? (Marque todas as opções aplicáveis)</b></p>
+        <p class="satisfação">
+          <b
+            >Qual parte do serviço nós recomenda melhorar? (Marque todas as
+            opções aplicáveis)</b
+          >
+        </p>
         <ul>
-          <li><label for="preferencia">
-            <input type="checkbox"><b> Transporte adecuado</b>
-          </label></li>
           <li>
             <label for="preferencia">
-            <input type="checkbox"><b> Tempo de Entrega</b>
-          </label></li>
-          <li>
-            <label for="preferencia">
-              <input type="checkbox"><b> Educação dos empleados</b>
+              <input type="checkbox" /><b> Transporte adecuado</b>
             </label>
           </li>
           <li>
             <label for="preferencia">
-              <input type="checkbox"><b> Nosso atendimento</b>
+              <input type="checkbox" /><b> Tempo de Entrega</b>
             </label>
           </li>
           <li>
             <label for="preferencia">
-              <input type="checkbox"><b> Serviço completo</b>
+              <input type="checkbox" /><b> Educação dos empleados</b>
+            </label>
+          </li>
+          <li>
+            <label for="preferencia">
+              <input type="checkbox" /><b> Nosso atendimento</b>
+            </label>
+          </li>
+          <li>
+            <label for="preferencia">
+              <input type="checkbox" /><b> Serviço completo</b>
             </label>
           </li>
         </ul>
 
         <p><b>Algum comentário ou sugestão?</b></p>
-        <textarea name="comentario" cols="79" rows="4" placeholder="Deixe seu comentario aqui...."></textarea>
-    </article>
+        <textarea name="comentario" cols="79" rows="4" placeholder="Deixe seu comentario aqui...."
+        ></textarea>
+      </article>
 
-    <footer class="footer">
-      <button class="boton" type="submit">Enviar</button>
-    </footer>
+      <footer class="footer">
+        <button class="boton" type="submit">Enviar</button>
+      </footer>
+    </form>
 
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"
     ></script>
+    <script src="./src/java.js"></script>
+    <script src="./src/settings.js"></script>
   </body>
 </html>
